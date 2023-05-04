@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: tahoma, arial;
+    width: 90%;
+    margin: 60px;
+}
+
+.container{
+    position: relative;/*o absolut precisa de uma referencia que sera essa*/
+    background-color: rgb(22, 37, 49);
+    height: 60px;
+}
+
+.container img{
+    margin-left: 100px;
+}
+
+nav{/*mexendo na parte superior do menu*/
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
+.container nav ul{
+    text-align: right;
+    margin-top: px;
+
+}
+
+.container nav ul li{
+    padding-bottom: 20px;
+    text-align: right;
+    list-style: none;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.container nav a:hover{/*para dar efeito quando passa o mouse*/
+    color: white ;
+}
+
+.container a{
+    text-decoration: none;
+    margin-right: 15px;
+    color: rgba(255, 255, 255, .4);
+}
+
+
+
+.containerMain{
+    width: 100%;
+    background-size: cover;/*mostrando imagem inteira removendo alguns cantinhos*/
+    background-position: right center;
+
+}
+
+.containerArticle{
+    padding: 50px 100px;/*50 cima baixo 100 laterais*/
+    text-align: center;
+    color: #252525;
+}
+
+.containerArticle h2{
+    margin-bottom: 27px;
+    font-size: 36px;
+    color: #252525;
+}
+
+
+.containerSection{
+    color: #555;
+    padding: 0 100px 50px 100px;
+   /* background: red; linha para entendimento*/
+   overflow: auto;/*para ajustar elementos em volta*/
+
+}
+
+.card{
+        /*background: yellow;*/
+        width: 32%;/*espaço que cada card ira pegar*/
+        float: left;
+        display: inline-block;
+        text-align: center;
+    
+}
+
+.card h5{
+    text-transform: uppercase;
+    letter-spacing: 4px;/*afastando letras*/
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.containerText{
+    background-color: #003d52;
+    color: white;
+    padding: 150px;
+    background-image: url(../fashion/imagens/bg_detalhe.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    /*background: red;*/
+    
+}
+
+.containerText h1{
+    text-transform: uppercase;
+    font-size: 46px;
+    font-weight: normal;
+}
+
+.containerText p{
+    margin-top: 10px;
+    width: 70%;/*faz quebra de linha*/
+    line-height: 1.5;
+}
+
+.containerText2{  
+width: 90.9%;
+margin: 50px 0;
+}
+
+.containerText2 address{
+    color: #143f52;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.mapa{
+    margin: 0;
+}
+
+.mapa iframe{
+    width: 100%;
+    margin: 0;
+}
+
+
+footer{
+    margin: 0;
+    background: #0b171f;
+    padding: 25px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+    color: #6f8597;
+}
