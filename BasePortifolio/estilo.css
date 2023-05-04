@@ -1,0 +1,386 @@
+
+/*last-child lin 98*/
+/*dentro table peguei tbody a primeira tr e as tds que estao dentro*/ 
+/*font pega no google*/
+/*nth-child pega o filho selecionado*/
+/*max-width: 100%;ajusta até o tamanho maximo da propria imagem*/
+
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: #666;
+    line-height: 1.7;
+}
+
+a{
+    transition: color .2s linear, border .2s linear;
+    text-decoration: none;
+    border-bottom: 1px dotted ;/*borda sublinhada*/
+    color: #49bf9d;
+}
+
+p{/*em usado para afastar referente ao tamanho da fonte*/
+    margin: 0 0 2em;
+}
+
+img{
+    max-width: 100%;/*ajusta até o tamanho maximo da propria imagem*/
+}
+
+a:hover{/*quando passar o mouse a borda some*/
+
+    border-bottom-color: transparent;/*colocando none some bruscamente*/
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: #787878;
+    font-weight: normal;
+    margin: 1em  0 1em;/*ele afasta referente ao tamanho da fonte*/
+}
+/*--------------------------------------------------------*/
+h1{
+    font-size: 36px;
+}
+h2{
+    font-size: 30px;
+}
+h3{
+    font-size: 26px;
+}
+h4{
+    font-size: 22px;
+}
+h5{
+    font-size: 18px;
+}
+h6{
+    font-size: 15px;
+}
+
+sub, sup{/*para jogar a linha para cima ou para baixo*/ 
+    font-size: 12px;
+}
+
+blockquote{
+    border-left: 5px solid #efefef;
+    margin: 2em 0;
+    padding: .5em 0 .5em 1.5em;
+}
+
+blockquote p{
+    margin-bottom: 0;
+}
+
+code{
+    background: #f7f7f7;
+    border-radius: .35em;
+    border: 2px solid #efefef;
+    font-size: .9em;
+    padding: 0.25em 0.65em;
+    font-family: "Courier New", Courier, monospace;
+    color: #929292;
+}
+
+pre code{
+    display: block;
+}
+
+ul, ol{
+    margin: 0;
+    padding: 0;
+    padding-left: 1.1em;
+}
+
+li{
+    padding-left: .5em;
+}
+
+.hidden{/*para esconder oq esta escrito em redes sociais mas esta assesivel*/
+    display: none;
+}
+
+.row{/*linha ul*/
+    overflow: auto;
+}
+
+.col{/*coluna ul*/
+    width: 50%;
+    float: left;
+}
+
+.ul-alternate{
+    list-style-type: none;
+    padding-left: 0;
+
+}
+
+.ul-alternate li{
+    border-bottom: 1px solid rgb(236, 219, 219);
+    padding-left: 0;
+}
+
+.ul-alternate li:last-child{/*para deixar apenas a ultima linha sem a borda*/
+    border-bottom: 0;
+}
+
+.ul-icons{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.ul-icons li{
+    display: inline-block;
+    font-size: 2em;
+    color: #49bf9d;
+}
+
+.icongit{
+    margin-top:2px ;
+    color: #49bf9d;
+}
+
+.main-header{
+    position: fixed; /*para deixar header fixado*/
+    top: 0;/*para ficar traVADO EM CIMA*/
+    left: 0;/*para ficar traVADO EM CIMA*/
+    height: 100%;
+    width: 35%;
+    background: rgb(173, 153, 153);
+    padding: 200px 54px 72px;
+    box-sizing: border-box;/*para dar o respiro para dentro do padding*/
+    background-image: url(../CSS/images/overlay.png),url(../CSS/images/bg.jpg);
+    /*primeira imagem para dar textura*/
+    background-position: center top;
+    background-size: cover;
+    text-align: right;
+}
+
+.main-header-title{
+    font-size: 14px;
+    line-height: 1.5;
+    color: white;
+    font-weight: normal;
+    color: rgb(255,255,255, .5);/*APLICANDO TRANSPARENCIA*/
+}
+
+.main-header-title strong{
+    font-weight: normal;
+    color: white;
+}
+
+.main-header-link{
+    color: inherit;/*herda a herança do elemento pai que no caso é o */
+}
+
+.main-header-link:hover{
+    color: #49bf9d;
+}
+
+.main-content{
+    width: 65%;/*li 13 foi definido largura de 35% emtao para fixar no restante fica 65*/
+    margin-left: 35%;
+    padding: 200px 54px 72px;
+    box-sizing: border-box;/*para dar o respiro para dentro do padding*/
+}
+
+/*--------CARDS------------*/
+.main-header-link img{/*foto de perfil*/
+    border-radius: 50%;
+    overflow: hidden;/*esconde a diferença de imagem*/
+}
+
+.recent-works-card img{
+    border-radius: 10px;
+    overflow: hidden;/*esconde a diferença de imagem*/
+}
+
+.gallery-img  img{
+    width: 100%;
+}
+
+.gallery-thumb img, .gallery-img img{
+    margin-bottom: 2%;/*relativo ao elemento pai */
+    display: inline-block;
+    border-radius: 5px;
+}
+/*grid*/
+
+.row{
+    overflow: auto;
+}
+
+.col-2{
+    width: 49%;
+    float: left;
+}
+/*afastando email e nome do form*/
+
+.col-2:first-child{
+    margin-right: 1.5%;
+}
+.col-2:last-child{
+    margin-left: 1.5%;
+}
+
+/*oculpa 2 colunas de 3*/
+.col-2-3{
+    width: 66%;
+    float: left;
+}
+
+.col-1-3{
+    width: 32%;
+    float: left;
+}
+/*endereço--------------------------*/
+
+/*pegando filhos a cada multiplo de 3 - 1  */
+/* pega 2,5,8... todo multiplo de 3 */
+
+.col-1-3:nth-child(3n -2){
+    margin-right:2%;
+}
+
+.col-1-3:nth-child(3n){/*3,6,9...*/
+    margin-left:2%;
+}
+/*pegar toda col 1-3 que vem logo apos col 2-3 e no outro cara aplicamos margin leaft*/
+/*vai selecionar todo elemento imediatamente apos o primeiro*/
+/*ira selecionar o col-1-3 imediatamente apos o col-2-3 */
+
+.col-2-3 + .col-1-3{
+    margin-left:2%;
+}
+
+/* pegando todo elemento 2-3 que vem imediatamente apos 1-3 */
+.col-1-3 + .col-2-3{
+    margin-left:2%;
+}
+/*--------------------------------*/
+
+/*caixa de texto do email e nome*/
+textarea{
+    height: 170px;
+}
+
+input, label, textarea, select{
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;/*para resolver o problema de rolagem*/
+}
+
+input, textarea, select{
+    background: #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    border: 3px solid transparent;
+    margin-bottom: 15px;
+    
+}
+/*atributos especificos*/;
+input[type="radio"], input[type="checkbox"]{
+    width: auto;
+}
+
+input:focus, textarea:focus{
+    border: 2px solid #49bf9d;
+    outline: none;
+}
+/*--------------botoes-------------------*/
+
+.button-default{
+    background-color: #49bf9d;
+    border: 2px solid #49bf9d;
+    color: white;
+    padding: .75em 1.5em;
+    border-radius: 6px;
+    font-size: .8em;
+    display: inline-block;
+    width: auto;
+    transition: all .5s;/*all significa que vai animar qualquer propriedade em .2s*/
+    cursor: pointer;/*aparecera a maozinha*/
+}
+
+.button-default:hover{
+    background-color: #5dc7a9;
+    border-color: transparent;
+}
+.button-default-stroke{
+    background-color: white;
+    border-color: #efefef;
+    color: inherit;/*herda as caracteristicas do a*/
+}
+
+/*animaçao dos strokers*/
+.button-default-stroke:hover{
+    color: #49bf9d;
+    border-color: #49bf9d;
+    background-color: white;/*tirando aqui fica verde e anima só a borda*/
+}
+
+.button-default-small{
+    font-size: .65em;
+}
+.button-default-big{
+    font-size: 1em;
+}
+.button-default-full{
+    /*mudando aqui ja oculpa 100% da largura*/
+    text-align: center;
+    display: block;
+}
+/*----------------------------------------*/
+.imagem-link{
+border: 0;
+}
+/*--------------tabelas-------------------*/
+
+.table{
+    width: 100%;/*tabela oculpa todo o espaço*/
+    margin: 0 0 2em 0;
+    border-collapse: collapse;/*border-collapse define se as bordas da tabela devem ser recolhidas em uma única borda ou separadas*/
+    text-align: left;
+}
+
+.table td{
+    padding: .75em;
+}
+
+.table th{
+    background: #ccc;
+    padding: .75em;
+}
+
+.table tbody tr td{
+    border-bottom: 0.5px solid #ccc;
+}
+
+/*dentro table peguei tbody a primeira tr e as tds que estao dentro*/ 
+.table tbody tr:first-child td{
+    border-top: 2px solid #666;
+}
+
+/*msm da de cima porem esta é ultima*/
+.table tbody tr:last-child td{
+    border-bottom: 2px solid #666;
+}
+
+/*pega o filho selecionado*/
+.table tbody tr:nth-child(even) td{
+    background: #ccc;
+}
+
+
+.table-alternate tbody td, .table-alternate tbody tr:first-child td,.table-alternate tbody tr:last-child td{
+    border: 1px solid #ddd;
+}
+
+.main-footer{
+    position: fixed;
+    bottom: 0;
+    width: 35%;
+    left: 0;
+    padding: 0 54px 72px 0;
+    box-sizing: border-box;
+    text-align: right;
+  }
